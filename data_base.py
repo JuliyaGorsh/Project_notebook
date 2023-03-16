@@ -1,6 +1,6 @@
 
 import notebook as nb
-path = r'notebook.csv'
+path = r'Project_notebook/notebook.csv'
 
 def load_note() -> list:
     global path
