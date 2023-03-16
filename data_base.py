@@ -9,6 +9,13 @@ def load_note() -> list:
     nb.set_notebook(str_to_list(data))
     print('Блокнот загружен\n')
 
+def save_note():
+    global path
+    ready_book = list_to_str(nb.get_note_book())
+    with open(path, 'w', encoding='UTF-8') as file:
+        file.write(ready_book)
+    print('Блокнот сохранен\n')
+
 def list_to_str(notebook: list) -> str:
     str_notebook = ''
     for note in notebook:
