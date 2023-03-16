@@ -1,5 +1,4 @@
 
-
 import notebook as nb
 from datetime import datetime as dt
 
@@ -42,3 +41,9 @@ def input_new_note():
     time = dt.now().strftime("%d/%m/%y %H:%M")
     new_note = [time, title, text] 
     return new_note
+
+def input_remove_note():
+    print()
+    print_notebook()
+    id = int(input('Введите ID заметки, которую необходимо удалить: '))
+    return id
