@@ -37,3 +37,20 @@ def find_note():
     if x != 1:
         print('Ничего не найдено')
     print()
+
+def change_note():
+    global notebook
+    id = int(input('Введите ID заметки, которую хотите изменить: '))
+    print(notebook[id-1])
+    change = int(input('Выберите, что хотите изменить (1-заголовок, 2-текст заметки): '))
+    if change == 1:
+        new_name = input('Введите новый заголовок: ')
+        notebook[id-1][0] = dt.now().strftime("%d/%m/%y %H:%M")
+        notebook[id-1][1] = new_name
+    if change == 2:
+        new_note = input('Введите новый текст: ')
+        notebook[id-1][0] = dt.now().strftime("%d/%m/%y %H:%M")
+        notebook[id-1][2] = new_note
+
+    print('Не забудь сохранить изменения!')
+    print()
