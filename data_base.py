@@ -1,4 +1,13 @@
 
+import notebook as nb
+path = r'notebook.csv'
+
+def load_note() -> list:
+    global path
+    with open(path, 'r', encoding='UTF-8') as file:
+        data = file.readlines()
+    nb.set_notebook(str_to_list(data))
+    print('Блокнот загружен\n')
 
 def list_to_str(notebook: list) -> str:
     str_notebook = ''
