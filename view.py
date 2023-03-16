@@ -25,3 +25,14 @@ def input_menu():
                 print('Такого пункта меню нет. Внимательнее, пожалуйста')
         except:
             print('Ошибка ввода. Введите корректный пункт меню')
+
+
+def print_notebook():
+    note_book = nb.get_notebook()
+    print()
+    if len(note_book) < 1:
+        print('Блокнот пустой или не загружен\n')
+    else:
+        for id, contact in enumerate(note_book, 1):
+            print(id, *contact)
+    print()
