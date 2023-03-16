@@ -26,7 +26,6 @@ def input_menu():
         except:
             print('Ошибка ввода. Введите корректный пункт меню')
 
-
 def print_notebook():
     note_book = nb.get_notebook()
     print()
@@ -36,3 +35,10 @@ def print_notebook():
         for id, contact in enumerate(note_book, 1):
             print(id, *contact)
     print()
+
+def input_new_note():
+    title = input('Введите заголовок заметки: ')
+    text = input('Введите текст заметки: ')
+    time = dt.now().strftime("%d/%m/%y %H:%M")
+    new_note = [time, title, text] 
+    return new_note
