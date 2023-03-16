@@ -11,7 +11,7 @@ def load_note() -> list:
 
 def save_note():
     global path
-    ready_book = list_to_str(nb.get_note_book())
+    ready_book = list_to_str(nb.get_notebook())
     with open(path, 'w', encoding='UTF-8') as file:
         file.write(ready_book)
     print('Блокнот сохранен\n')
